@@ -1,0 +1,43 @@
+<div class="form-container">
+    <div class="close-btn" routerLink="/">x</div>
+    <h2>Créer un compte</h2>
+    <form action="#" method="POST">
+        
+        <div class="form-row">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required autocomplete="given-name">
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required autocomplete="family-name">
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+            <label for="file-upload" class="upload-box">
+                <img src="https://img.icons8.com/ios/50/000000/image.png" alt="upload icon">
+                <p>Upload Image</p>
+            </label>
+            <input id="file-upload" type="file" accept="image/*">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="address" name="address" placeholder="Adresse" required autocomplete="address-line1">
+        </div>
+
+        <div class="form-group">
+            <input type="date" id="birth" name="birth" required autocomplete="bday">
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
+        </div>
+
+        <div class="form-button">
+            <button type="submit">Sign Up</button>
+        </div>
+
+        <div class="form-footer">
+            <p>Deja un compte ? <a href="connecxion.html">Connectez-vous</a></p>
+        </div>
+    </form>
+</div>
