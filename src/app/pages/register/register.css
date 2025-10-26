@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1b374a, #3a6073);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  z-index: 100000;
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  max-width: 420px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1b374a;
+}
+
+/* Alignement nom/prénom */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #1b374a;
+  background: #f9f9f9;
+}
+
+/* Upload */
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.3s;
+  padding: 5px;
+  display: block;
+  width: 90%;
+}
+
+.upload-box:hover {
+  border-color: #1b374a;
+}
+
+.upload-box img {
+  width: 35px;
+  opacity: 0.6;
+}
+
+.upload-box p {
+  font-size: 13px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* Bouton */
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-button button {
+  width: 80%;
+  padding: 12px;
+  background-color: #1b374a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #274d66;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #1b374a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

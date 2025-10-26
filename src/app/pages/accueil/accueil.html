@@ -1,0 +1,196 @@
+<header id="header">
+        <div class="head">
+            
+        </div>
+        <nav>
+            <div class="logo"><H1>INONA-LIB</H1></div>
+            <div class="hambuger" (click)="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="info">
+                <ul>
+                    <li><a href="#"><i class="fab fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Service</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="button">
+                <button class="signIn" routerLink="/login">Sign In</button>
+                <button class="signUp" routerLink="/register">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="fond">
+            <img 
+                [src]="fond1024"
+                [attr.srcset]="
+                    fond480 + ' 480w, ' +
+                    fond768 + ' 768w, ' +
+                    fond1024 + ' 1024w, ' +
+                    fond1440 + ' 1440w'
+                "
+                sizes="(max-width: 480px) 480px,
+                        (max-width: 768px) 768px,
+                        (max-width: 1024px) 1024px,
+                        1440px"
+
+                alt="Image d'une bibliothèque">
+        </div>
+        <div class="text">
+            <H1>Bienvenue a l'univers du savoir moderne</H1>
+            <p>Ici, le savoir se partage dans un cadre moderne et accueillant.</p>
+            <p>Un lieu pense pour lire, travailler et s'epanouire</p>
+        </div>
+
+    </section>
+
+    <section id="service">
+        <div class="livres">
+            <div class="livre">
+                <img [src]="livre1" alt="">
+                <div class="show">
+                    <p> Plongez dans un univers épique p......</p>
+                </div>
+                <div class="hide">
+                    <p>Plongez dans un univers épique peuplé de</p>
+                    <p>héros , de créatures fantastiques et de </p>
+                    <p>batailles légendaires. Une aventure </p>
+                    <p>inoubliable à travers la Terre du Milieu !</p>
+                </div>
+            </div>
+            <div class="livre">
+                <img [src]="livre2" alt="">
+                <div class="show">
+                    <p> Découvrez un guide spirituel inte.....</p>
+                </div>
+                <div class="hide">
+                    <p>Découvrez un guide spirituel intemporel,</p>
+                    <p>riche en sagesse, histoires et enseignem- </p>
+                    <p>ents qui ont traversé les siècles.</p>
+                </div>
+            </div>
+            <div class="livre">
+                <img [src]="livre3" alt="">
+                <div class="show">
+                    <p> Entrez dans le monde des légendes ....</p>
+                </div>
+                <div class="hide">
+                    <p>Entrez dans le monde des légendes arthur-</p>
+                    <p>iennes, où courage, loyauté et magie se </p>
+                    <p>rencontrent autour de la Table Ronde.</p>
+                </div>
+            </div>
+            <div class="livre">
+                <img [src]="livre4" alt="">
+                <div class="show">
+                    <p> Suivez l’histoire captivante de.......</p>
+                </div>
+                <div class="hide">
+                    <p>Suivez l’histoire captivante de Naruto, </p>
+                    <p>un jeune ninja au cœur courageux, dans sa</p>
+                    <p>quête pour devenir le plus grand des héros.</p>
+                </div>
+            </div>
+        </div>
+        <div class="statistique">
+            <div class="stat">
+                <p>Users</p>
+                <h1>981</h1>
+            </div>
+            <div class="stat">
+                <p>Documents</p>
+                <h1>3005</h1>
+            </div>
+            <div class="stat">
+                <p>Documents out</p>
+                <h1>1900</h1>
+            </div>
+            <div class="stat">
+                <p>Documents Returned</p>
+                <h1>1955</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <div class="about-text">
+                <h1>Bienvenue à la Bibliothèque Labo Academy</h1>
+                <p>Notre bibliothèque est un espace moderne de savoiret de découverte, conçu pour 
+                    offrir à nos visiteurs une expérience unique d’apprentissage et de culture.
+                    Avec plus de 10 000 documents (livres, dictionnaires, magazines, publications 
+                    universitaires et ouvrages spécialisés), nous mettons à votre disposition une 
+                    collection riche et variée, couvrant aussi bien les sciences, les technologies, 
+                    la littérature, l’histoire, les arts que le développement personnel.</p>
+                <h2>Notre mission</h2>
+                <p>Offrir un accès facile, rapide et sécurisé à la connaissance, que vous soyez 
+                    étudiant, chercheur, professionnel ou simple passionné de lecture.</p>
+                <h2>Nos services phares</h2>
+                <p>Consultation en ligne du catalogue et réservation de documents
+                Emprunts et retours simplifiés grâce à une gestion numérique moderne
+                Accès à des ouvrages rares et spécialisés dans divers domaines
+                Une équipe de bibliothécaires et d’agents toujours disponibles pour vous accompagner
+                Statistiques en temps réel sur les emprunts, les abonnés et les nouveautés</p>
+                <h2>Pourquoi choisir notre bibliothèque ?</h2>
+                <p>Une plateforme numérique intuitive, accessible depuis n’importe où
+                Des milliers de livres et documents mis à jour régulièrement
+                Une communauté active de lecteurs et chercheurs
+                Un système sécurisé de gestion des emprunts basé sur les dernières technologies</p>
+                <h2>Notre vision</h2>
+                <p>Faire de la Bibliothèque Labo Academy un lieu incontournable de savoir et de partage, 
+                où la culture et la technologie se rencontrent pour inspirer les générations présentes et futures.</p>
+            </div>
+            <div class="image">
+                <div class="imageDG">
+                    <img [src]="DG" alt="image du directeur">
+                </div>
+                <div class="citation">
+                    <em>Mon rêve est de faire de cette bibliothèque un lieu où chaque visiteur trouve la clé de son propre succès.</em><br>
+                    <h2>Directeur – Jean Dupont</h2>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <footer class="footer">
+       <div class="footer-content">
+         <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="#"><i class="fab fa-instagram"> </i> instagram</a>
+            <a href="#"><i class="fab fa-linkedin-in"> </i> linkedin </a>
+         </div>
+        </div>
+        <div class="images">
+            <div class="logoImage">
+                <img [src]="logo1" alt="img">
+            </div>
+            <div class="logoImage">
+                <img [src]="logo2" alt=" imag ">
+            </div>
+            <div class="logoImage">
+                <img [src]="logo3" alt=" imag">
+            </div>
+            <div class="logoImage">
+                <img [src]="logo4" alt=" imag ">
+            </div>
+            <div class="logoImage">
+                <img [src]="logo5" alt=" imag ">
+            </div>
+            <div class="logoImage">
+                <img [src]="logo6" alt=" imag ">
+            </div>
+        </div>
+            <div class="form-group">
+               <p> copy ; 2025 INONA-LIB Tout droit reserves</p>
+               </div>
+            <div class="maile">
+             <p><i class="fas fa-envelope"></i> envoyer un mail</p>
+             <label for=""></label>
+             <input type="text" placeholder="envoyer un mail" id="textfield">
+        </div>
+</footer>
