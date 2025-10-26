@@ -1,0 +1,407 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.head{
+    width: 100%;
+    background-color: #1b374a;
+    height: 50px;
+    border: solid, black, 2px, 2px;
+    border-radius: 5px; 
+    
+}
+
+.fond img{
+    filter: brightness(40%);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.hide-head{
+    transform: translateY(-40%);
+}
+
+
+
+
+.logo{
+    /* margin-top: 5px; */
+    padding-left: 50px;
+    width: 20%;
+    color: #1b374a;
+}
+
+.hambuger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+}
+
+.hambuger span{
+    height: 3px;
+    width: 25px;
+    background-color: #1b374a;
+    border-radius: 5px;
+}
+.info{
+    margin-top: 15px;
+    width: 60%;
+}
+
+ .info ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;    
+}
+
+nav{
+    position: relative;
+    display: flex;
+    box-shadow: 0px, 4px, 6px rgba(0, 0, 0, 0.9);
+}
+
+a{
+    color: #1b374a;
+    text-decoration: none;
+}
+
+.button{
+    padding-right: 5px;
+    display: flex;
+    width: 20%;
+    /* height: 50px; */
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.button p{
+    border: 1px solid #1b374a;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.button button:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.signIn{
+    background-color: white;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signUp{
+    background-color: #1b374a;
+    color: white;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* === VERSION MOBILE === */
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Hamburger en haut à gauche */
+    .hambuger {
+        display: flex;
+        order: 3;
+        position: absolute;
+        justify-content: flex-start;
+        right: 25px;
+        bottom: 30px;
+    }
+
+    /* Boutons en haut à droite */
+    .button {
+        order: 3;
+        width: 100%;
+        justify-content: flex-end;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .button p {
+        font-size: clamp(12px, 3vw, 15px);
+        padding: 8px 12px;
+    }
+
+    /* Logo (nom de la bibliothèque) en dessous à gauche */
+    .logo {
+        order: 1;
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+        font-size: clamp(18px, 5vw, 28px);
+        margin-top: 10px;
+    }
+
+    /* Menu caché par défaut */
+    .info {
+        order: 2;
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 120px;
+        right: 30px;  /* fixé à gauche */
+        width: 200px; /*largeur raisonnable*/
+        padding: 15px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 2000;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .info.show{
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .info ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info ul li {
+        margin: 5px 0;
+    }
+}
+
+
+#home{
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+
+section .fond img{
+    width: 100%;
+    height: 520px;
+}
+
+section{
+    padding: 40px 20px;
+}
+
+.text{
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    color: white;
+}
+
+.livre{
+    position: relative;
+    margin-top: 3%;
+    height: 500px;
+}
+
+.livre img{
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.livre:hover img{
+    transform: scale(1.05);
+}
+
+.livres{
+    /* display: flex;
+    justify-content: space-around; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.hide p{
+    display: none;
+}
+
+.show p{
+    display: block;
+}
+
+.livre:hover .show p {
+  display: none;    /* cache le texte court */
+}
+
+.livre:hover .hide p {
+  display: block;   /* affiche le texte long */
+}
+
+.statistique{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+    gap: 15%;
+    margin: 5%;
+    justify-content: center;
+}
+
+.stat{
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-text{
+    flex: 1 1 60%;
+    min-width: 300px;
+}
+
+.image{
+    margin-top: 50px;
+    flex: 1 1 35%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.citation{
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    padding: 1%;
+}
+
+em{
+    padding: 10%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+.footer{
+     background-color: #1b374a;
+     color: #fff;
+     padding: 20px 0;
+     text-align: center;
+     
+}
+
+.social-icons{
+        position: relative;
+        justify-content: space-around;
+        width: 100%;
+        display: flex;
+ }
+
+ .social-icons a{
+    color: white;
+ }
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 50px;
+    margin: 5%;
+ }
+
+.logoImage{
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.logoImage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+ }
+
+ .form-group{
+    text-align: center;
+ }
+ .maile{
+    text-align: right;
+ }
+
+ #textfield{
+    padding: 2px;
+    border: 0px solid wheat;
+    border:none; 
+    width: 110px;  
+ }
+
+
+
+ @media screen and (max-width: 768px) {
+    .about{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .about-text{
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    .image{
+        margin-top: 20px;
+    } 
+
+}
